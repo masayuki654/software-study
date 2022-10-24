@@ -9,3 +9,5 @@ There are some features.
 or
 `yarn add styled-components`
 
+## Recommended extension
+styled-components.vscode-styled-components
