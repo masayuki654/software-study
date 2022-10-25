@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 
 
@@ -29,7 +29,19 @@ const Button = styled.button<{primary?: boolean}>`
 const TomatoButton = styled(Button)`
   color: tomato;
   border-color: tomato;
-`
+`;
+
+//styling any component
+const Link = ({ className, children }: {className?: string, children: ReactNode}) => (
+  <a className={className}>
+    {children}
+  </a>
+);
+
+const StyledLink = styled(Link)`
+  color: palevioletred;
+  font-weight: bold;
+`;
 
 function App() {
   return (
@@ -39,9 +51,14 @@ function App() {
           Hello World!
         </Title>
       </Wrapper>
-        <Button>Normal</Button>
-        <Button primary>Primary</Button>
-        <TomatoButton>Tomato Button</TomatoButton>
+      <Button>Normal</Button>
+      <Button primary>Primary</Button>
+      <TomatoButton>Tomato Button</TomatoButton>
+      <div>
+        <Link>Unstyled, boring Link</Link>
+        <br/>
+        <StyledLink>Styled, existing Link</StyledLink>
+      </div>
     </>
   );
 }
