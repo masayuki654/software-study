@@ -32,6 +32,7 @@ const TomatoButton = styled(Button)`
 `;
 
 //styling any component
+//You can add styling to the specific child using '& >' or 'nth-child()'
 const Link = ({ className, children }: {className?: string, children: ReactNode}) => (
   <a className={className}>
     {children}
