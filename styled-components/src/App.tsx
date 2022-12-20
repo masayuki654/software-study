@@ -7,6 +7,9 @@ const Title = styled.h1`
   font-size: 1.5em;
   text-align: center;
   color: palevioletred;
+  & > div {
+    color: red;
+  };
 `;
 
 const Wrapper = styled.section`
@@ -50,10 +53,13 @@ function App() {
       <Wrapper>
         <Title>
           Hello World!
+          <div>
+            hello
+          </div>
         </Title>
       </Wrapper>
       <Button>Normal</Button>
-      <Button primary>Primary</Button>
+      <Button primary={false}>Primary</Button>
       <TomatoButton>Tomato Button</TomatoButton>
       <div>
         <Link>Unstyled, boring Link</Link>
