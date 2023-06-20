@@ -1,0 +1,4 @@
+2023-06-18 23:14:49,836 - log test - DEBUG - Hello world
+2023-06-18 23:14:49,838 - log test - INFO - info
+2023-06-18 23:22:45,220 - root - DEBUG - Hello world
+2023-06-18 23:22:45,221 - root - INFO - info
